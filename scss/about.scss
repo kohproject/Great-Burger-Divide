@@ -1,0 +1,550 @@
+$start: #dc1038;
+$red-coupon: #990000;
+$light-red-coupon: lighten($red-coupon, 50%);
+body.contact,
+body.about{
+  background:#be1739;
+  &:after{
+    background:#be1739;
+  }
+
+  .container-about,
+  .container-contact {
+    position: relative;
+    width: 100%;
+    max-width: 99vw;
+    padding-top: 40px;
+
+    section.sect__accent {
+      height: 75px;
+      width: 100%;
+      left: 0px;
+      position: absolute;
+      top: 40px;
+      z-index: 1;
+      border-bottom: dashed 1px lighten($start, 20%);
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      &:before {
+        content: "";
+        background: #1f2e3f;
+        // background:lighten($start,5%);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: block;
+        z-index: -1;
+      }
+      .wrap__marquee {
+        width: 30%;
+        height: 54px;
+        position: absolute;
+        top: 20px;
+        right: 0px;
+        overflow: hidden;
+      }
+      .block__marquee {
+        position: absolute;
+        top: 0px;
+        padding: 8px 20px 0px 20px;
+        right: 0px;
+        border-radius: 8px;
+        width: 100%;
+        height: 75px;
+        color: #fff;
+        transform: translateX(100%);
+        transition: transform 0.2s ease;
+
+        &:before {
+          content: "";
+          background: #111;
+          width: 100%;
+          height: 100%;
+          top: 0px;
+          left: 0px;
+          display: block;
+          position: absolute;
+          opacity: 0.8;
+          z-index: -1;
+        }
+        h3 {
+          font-weight: normal;
+          font-size: 18px;
+          margin: 0px 0px 2px 0px;
+          padding-bottom: 4px;
+          border-bottom: dotted 1px #ccc;
+        }
+        #sp__title-name,
+        h3 {
+          text-transform: capitalize;
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+
+      //*===== SEARCH BLOCK =========================== */
+
+      .wrap__search {
+        height: 100%;
+        width: 20%;
+        max-width: 300px;
+        padding: 20px 10px 20px 10px;
+        margin-left: 2%;
+        display: block;
+        position: relative;
+        z-index: 2;
+        &:before {
+          content: "";
+          display: block;
+          //background:$end;
+          top: -20px;
+          left: -10px;
+          right: -10px;
+          width: calc(100% + 40px);
+          z-index: -1;
+          height: 122px;
+          position: relative;
+          opacity: 0.5;
+        }
+        .inp__wrap {
+          margin: 0px;
+          width: calc(100% - 22px);
+          position: absolute;
+          outline: none;
+          display: block;
+          height: 35px;
+          top: 40px;
+          left: 5px;
+          background: lighten($start, 20%);
+          border: solid 1px darken($start, 20%);
+          border-bottom: solid 1px $start;
+          border-right: solid 1px $start;
+          > em {
+            display: block;
+            width: 22px;
+            height: 22px;
+            right: 32px;
+            border: solid 3px #ccc;
+            border-radius: 30px;
+            position: absolute;
+            mix-blend-mode: screen;
+            right: 8px;
+            top: 4px;
+            transform: scale(0.9);
+            &:after {
+              content: "";
+              width: 11px;
+              height: 5px;
+              display: block;
+              background: #ccc;
+              position: absolute;
+              right: -8px;
+              bottom: -3px;
+              border-radius: 4px;
+              transform: rotate(33deg);
+            }
+          }
+          input[type="text"] {
+            margin: 0px;
+            width: 90%;
+            height: 100%;
+            position: absolute;
+            border: 0px;
+            outline: none;
+            color: #660000;
+            top: 0px;
+            left: 2px;
+            background: transparent;
+          }
+        }
+        .list__search-drop {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 35px;
+          z-index: 999;
+          width: 100%;
+          li {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            height: 32px;
+            background: #eee;
+            border-bottom: dotted 1px #111;
+            padding-left: 20px;
+            &:hover {
+              background: #ddd;
+            }
+          }
+        }
+      }
+    }
+    main {
+      max-width: 640px;
+      margin: auto;
+      min-height: 900px;
+      padding-top: 110px;
+
+      section {
+        clear: both;
+        color: #fff;
+        blockquote {
+          display: block;
+          width: 20vw;
+          color: #666;
+          min-height: 200px;
+          margin: 0px -150px 30px 30px;
+          float: right;
+          padding: 20px;
+          font: italic 30px "Times New Roman", times;
+          position: relative;
+          z-index: 1;
+          &:before {
+            content: "";
+            background: #fff;
+            position: absolute;
+            z-index: -1;
+            opacity: 0.9;
+            mix-blend-mode: multiply;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            box-shadow: 0px 3px 20px darken($start, 20%);
+          }
+        }
+      }
+    }
+  }
+
+  .container-about {
+    h2,
+    h3 {
+      color: #fff;
+      font-weight: 400;
+      margin: 0px;
+      font-size: 28px;
+      margin: 40px 0px 10px 0px;
+    }
+
+    h2 {
+      font-size: 50px;
+      font-weight:bold;
+      margin: 0px 0px 30px 0px;
+      clear: both;
+    }
+    p {
+      font-size: 20px;
+    }
+
+    @keyframes marchingAnts {
+      0% {
+        background-position: 35px 0, -35px 100%, 0 -35px, 100% 35px;
+      }
+      100% {
+        background-position: 0 0, 0 100%, 0 0, 100% 0;
+      }
+    }
+
+    .marching-ants {
+      animation-play-state: running;
+      animation: marchingAnts 0.75s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      transition: padding 0.3s ease-in, opacity 0.5s ease-in;
+    }
+
+    blockquote {
+      width: 300px;
+      min-height:150px;
+      padding: 20px 10px 30px 10px;
+      background: #9d001e;
+      color: #fff;
+      font-size: 30px;
+      font-style: italic;
+      font-family: "times new roman";
+      position: absolute;
+      top: 340px;
+      right: 50px;
+      display: block;
+      box-sizing: border-box;
+      box-shadow: 0px -10px 30px #cc0000;
+      color: #fff;
+      text-align:center;
+      background-size: 20px 2px, 20px 2px, 2px 20px, 2px 20px;
+      background-position: 0 0, 0 100%, 0 0, 100% 0;
+      background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+      background-image: linear-gradient(
+          to right,
+          $start 25%,
+          $light-red-coupon 50%
+        ),
+        linear-gradient(to right, $start 50%, $light-red-coupon 50%),
+        linear-gradient(to bottom, $start 50%, $light-red-coupon 50%),
+        linear-gradient(to bottom, $start 50%, $light-red-coupon 50%);
+
+      b{
+        font:bold 56px arial;
+        white-space: nowrap;
+        display:block;
+        clear:both;
+      }
+
+      &:before {
+        content: "";
+        z-index: -1;
+        display: block;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        background: $start;
+        opacity: 0.9;
+      }
+      h5 {
+        font-weight: 900;
+        font-size: 20px;
+        display: inline-block;
+        margin: 0px;
+      }
+   
+      em{
+        display:block;
+        width:40px;height:38px;
+        position: absolute;
+        background-image:url(../imgs/scissors.svg);
+        background-repeat: no-repeat;
+        background-position: 5px 5px;
+        background-size:32px 30px;
+        top:-21px;
+        left:6%;
+      }
+    }
+
+    .after__sissors {
+      &:after {
+        content: "";
+        position: absolute;
+        width: 19px;
+        height: 16px;
+        background-image: url(https://pmall.neocities.org/coupon-sissors.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        left: 50%;
+        transform: translateX(-50%);
+        top: -8px;
+
+        filter: hue-rotate(20deg); //cyan
+        filter: hue-rotate(120deg); //violet
+        filter: hue-rotate(100deg); //light purple
+        filter: hue-rotate(90deg); // purple
+        filter: hue-rotate(300deg); // green
+        filter: hue-rotate(150deg); // light red
+        filter: hue-rotate(140deg); // magenta
+        filter: hue-rotate(155deg); // magenta
+      }
+    }
+  }
+}
+
+.contact__wrapper {
+  max-width: 600px;
+  margin: auto;
+  padding: 10px 0px;
+  z-index: 1;
+  position: relative;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    box-shadow: 0px 0px 40px #660000;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    opacity: 0.4;
+  }
+  h2,
+  h3 {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 300;
+    max-width: 440px;
+    margin: 0px auto;
+    letter-spacing: 0.03em;
+  }
+  h2 {
+    font-size: 50px;
+    font-weight:bold;
+    line-height: 50px;
+  }
+  h3 {
+    opacity: 0.85;
+    margin-top:5px;
+  }
+  .contact-response {
+    height: 0px;
+    background: lighten($start, 10%);
+    width: 100%;
+    max-width: 440px;
+    position: relative;
+    margin: 0px auto;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    > div {
+      position: absolute;
+      height: 100px;
+      width: 100%;
+      padding: 10px 20px;
+      transform: translateY(-100px);
+      transition: all 0.3s ease;
+      &:after {
+        content: "\263A";
+        color: #fff;
+        font-size: 50px;
+        position: absolute;
+        top: -10px;
+        right: 10px;
+        opacity: 0.6;
+      }
+
+      h3 {
+        font-size: 24px;
+        font-weight: normal;
+        margin: 0px;
+      }
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.contact__wrapper.success {
+  .contact-response {
+    margin: 20px auto;
+
+    height: 100px;
+    border: dashed 2px #ff0000;
+    > div {
+      transform: translateY(0px);
+    }
+  }
+}
+
+form {
+  max-width: 440px;
+  position: relative;
+  margin: 10px auto;
+  box-sizing: border-box;
+  * {
+    box-sizing: border-box;
+  }
+
+  input,
+  label,
+  textarea {
+    display: block;
+    width: 100%;
+    max-width: 440px;
+    padding-left: 4px;
+  }
+  input,
+  textarea {
+    border: 0px;
+    outline: none;
+  }
+  textarea {
+    max-height: 140px;
+  }
+  label {
+    margin: 7px 0px 3px 0px;
+    opacity: 0.9;
+  }
+  label.before-required-star {
+    position: relative;
+    &:before {
+      content: "*";
+      color: #ddd;
+      font-size: 17px;
+      position: absolute;
+      left: -8px;
+      top: 0px;
+    }
+  }
+  input[type=text] {
+    height: 40px;
+  }
+  li.err,
+  li.err.err-email,
+  li.err-email {
+    input.inp-req,
+    textarea.inp-req {
+      background: #f8b4c6;
+      outline: solid 2px #cc0000;
+    }
+    label {
+      position: relative;
+      &:after {
+        content: "required!";
+        position: absolute;
+        right: 0px;
+        text-align: right;
+        bottom: 0px;
+        color: #fff;
+        font: normal 10pt arial;
+      }
+    }
+  }
+
+  li.err-email {
+    label {
+      &:after {
+        content: "invalid email!";
+      }
+    }
+  }
+
+  button {
+    height:65px;
+    width: 96%;
+    border: none;
+    border-radius: 30px;
+    font-size: 20px;
+    margin: 30px auto;
+    outline: none;
+    text-shadow: 1px 1px 1px #fff;
+    background: linear-gradient(to bottom, #fff, #ccc);
+    &:hover,
+    &:active {
+      outline: none;
+    }
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 1px 1px 10px darken($start, 40%);
+      cursor: pointer;
+    }
+  }
+}
+
+$footerBlue:#1f2e3f;
+footer{
+    position: relative;
+    clear:both;
+    height:90px;
+    background: darken($footerBlue,10%);
+    border-top:solid 5px $footerBlue;
+    color:#999;
+    padding:20px 0px 40px 40px;
+}
